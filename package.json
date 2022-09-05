@@ -1,0 +1,48 @@
+{
+  "name": "@lottie-animation-community/lottie-types",
+  "version": "0.0.0",
+  "description": "Type definitions for the Lottie animation format",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts"
+  ],
+  "scripts": {
+    "clean": "rm -rf index.d.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format:prettier": "prettier --loglevel=warn --no-editorconfig --write .",
+    "build": "yarn clean && rollup -c",
+    "prepare": "husky install",
+    "changelog": "changeset add",
+    "changelog:check": "changeset status --since=main",
+    "changelog:version": "changeset version",
+    "changelog:publish": "changeset publish"
+  },
+  "repository": "https://github.com/lottie-animation-community/lottie-types",
+  "keywords": [
+    "lottie",
+    "lottiefiles",
+    "lottie-schema",
+    "lottie-types",
+    "lottie-file-format"
+  ],
+  "author": "Aidos Sabit <https://github.com/aidosmf/>",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.24.3",
+    "@types/node": "^17.0.23",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "2.6.2",
+    "rollup": "^2.66.1",
+    "rollup-plugin-dts": "^4.1.0",
+    "typescript": "^4.6.3"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@lottie-animation-community",
+    "access": "restricted"
+  }
+}
