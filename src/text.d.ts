@@ -373,22 +373,28 @@ export declare namespace Text {
      */
     ps?: [number, number];
     /**
-     * note that newlines are encoded with \\r
+     * Text
      *
+     * Text, note that newlines are encoded with \r
      * @default ''
      */
     t: string;
     /**
+     * Justify
+     *
      * @default 0
      */
     j?: TextType.Justify;
+    /**
+     * Text Caps
+     */
     ca?: TextType.Caps;
     /**
      * Text Tracking
      */
     tr?: number;
     /**
-     * Baseline Shify
+     * Baseline Shift
      */
     ls?: number;
     /**
@@ -397,12 +403,21 @@ export declare namespace Text {
     vj?: TextType.VerticalJustify;
   }
 
+  /**
+   * A keyframe containing a text document
+   */
   interface DataKeyframe {
     /**
      * Start
      */
     s: Document;
-    /** Start time of keyframe segment. */
+    /**
+     * Time
+     *
+     * Start time of keyframe segment.
+     * @default 0
+     *
+     * */
     t: Helpers.Time;
   }
 
