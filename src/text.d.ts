@@ -180,14 +180,6 @@ export declare namespace Text {
    */
   type AnimatorDataProperty = Helpers.Transform & {
     /**
-     * Rotate X
-     */
-    rx?: A.Value;
-    /**
-     * Rotate Y
-     */
-    ry?: A.Value;
-    /**
      * Stroke Width
      */
     sw?: A.Value;
@@ -195,6 +187,22 @@ export declare namespace Text {
      * Stroke Color
      */
     sc?: A.Color;
+    /**
+     * Stroke Hue
+     */
+    sh?: A.Value;
+    /**
+     * Stroke Saturation
+     */
+    ss?: A.Value;
+    /**
+     * Stroke Brightness
+     */
+    sb?: A.Value;
+    /**
+     * Stroke Opacity
+     */
+    so?: A.Value;
     /**
      * Fill Color
      */
@@ -208,6 +216,10 @@ export declare namespace Text {
      */
     fs?: A.Value;
     /**
+     * Fill Opacity
+     */
+    fo?: A.Value;
+    /**
      * Fill Brightness
      */
     fb?: A.Value;
@@ -216,9 +228,13 @@ export declare namespace Text {
      */
     t?: A.Value;
     /**
-     * Scale
+     * Blur
      */
-    s?: A.MultiDimensional;
+    bl?: A.Value;
+    /**
+     * Line Spacing
+     */
+    ls?: A.Value;
   };
 
   interface SelectorProperty {
