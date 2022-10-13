@@ -66,11 +66,7 @@ export declare namespace Asset {
   /**
    * Asset containing an animation that can be referenced by layers.
    */
-  interface Precomposition
-    extends Main,
-      Composition,
-      Helpers.MatchName,
-      Helpers.Framerate {
+  interface Precomposition extends Main, Composition, Helpers.Framerate {
     /**
      * Extra
      *
