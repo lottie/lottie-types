@@ -9,6 +9,10 @@ export declare namespace Effect {
     ty: EffectType.Value;
     /** Enabled */
     en?: Helpers.IntegerBoolean;
+    /**
+     * NumberOfProperties
+     */
+    np?: number;
   }
 
   /**
