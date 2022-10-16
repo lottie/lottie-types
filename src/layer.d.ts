@@ -42,27 +42,6 @@ export declare namespace Layer {
      * Start Time
      */
     st?: Helpers.Time;
-    /**
-     * Blend Mode
-     * @default 0
-     */
-    bm?: BlendMode.Value;
-    /**
-     * CSS class used by the SVG renderer
-     */
-    cl?: Helpers.CssClass;
-    /**
-     * Layer XML ID
-     *
-     * ID attribute used by the SVG renderer
-     */
-    ln?: Helpers.ID;
-    /**
-     * Layer XML tag name
-     *
-     * tag name used by the SVG renderer
-     */
-    tg?: string;
   }
 
   interface AudioSettings {
@@ -133,6 +112,27 @@ export declare namespace Layer {
      * Styling effects for this layer
      */
     sy?: Style.Value[];
+    /**
+     * Blend Mode
+     * @default 0
+     */
+    bm?: BlendMode.Value;
+    /**
+     * CSS class used by the SVG renderer
+     */
+    cl?: Helpers.CssClass;
+    /**
+     * Layer XML ID
+     *
+     * ID attribute used by the SVG renderer
+     */
+    ln?: Helpers.ID;
+    /**
+     * Layer XML tag name
+     *
+     * tag name used by the SVG renderer
+     */
+    tg?: string;
   }
 
   /**
