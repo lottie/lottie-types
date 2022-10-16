@@ -36,6 +36,8 @@ export declare namespace BlendMode {
   type Saturation = 13;
   type Color = 14;
   type Luminosity = 15;
+  type Add = 16;
+  type HardMix = 17;
 
   const enum VALUE {
     NORMAL = 0,
@@ -54,5 +56,7 @@ export declare namespace BlendMode {
     SATURATION = 13,
     COLOR = 14,
     LUMINOSITY = 15,
+    ADD = 16,
+    HARD_MIX = 17,
   }
 }
