@@ -203,7 +203,7 @@ export declare namespace AnimatedProperty {
    */
   interface Shape extends Main {
     /**
-     * @if "h": { "const": 1  }
+     * @if "a": { "const": 1  }
      * @then Animated Value - ShapeKeyframe[]
      * @else Static Value - Bezier
      */
