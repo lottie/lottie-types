@@ -120,7 +120,7 @@ export declare namespace Shape {
    */
   interface StrokeDash extends Helpers.VisualObject {
     /**
-     * @default 2
+     * @default 'd'
      */
     n?: StrokeDashType.Value;
     /**
