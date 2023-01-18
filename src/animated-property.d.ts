@@ -83,7 +83,7 @@ export declare namespace AnimatedProperty {
      */
     s?: number[] | Helpers.Bezier[];
     /**
-     * Bezier End Point (value)
+     * End Value
      *
      * Value at the end of the keyframe, note that this is deprecated and you should use `s` from the next keyframe to get this value
      *
