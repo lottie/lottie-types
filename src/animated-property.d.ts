@@ -48,14 +48,24 @@ export declare namespace AnimatedProperty {
      * In Tanget
      *
      * Easing tangent going into the next keyframe
+     *
+     * @if "h": { "const": 0 | undefined }
+     * @then 'i' is present
      */
     i?: KeyframeBezierHandle;
     /**
      * Out Tanget
      *
      * Easing tangent leaving the current keyframe
+     *
+     * @if "h": { "const": 0 | undefined }
+     * @then 'o' is present
      */
     o?: KeyframeBezierHandle;
+    /**
+     * Start
+     */
+    s: number[] | Helpers.Bezier[];
   }
 
   /**
@@ -65,27 +75,13 @@ export declare namespace AnimatedProperty {
     /**
      * Value
      *
-     * Value at this keyframe. Note the if the property is a scalar,
-     * keyframe values are still represented as arrays.
-     *
-     * In a normal Bezier curve description, the start point of a segment
-     * is defined by vertex 's' of any given Nth element of the array.
-     * The control point is defined by the 'o' of the Nth element.
-     * The curve segment's endpoint is the 's' of the (N+1)th element of the keyframe array,
-     * and the second control point is the 'o' of the (N+1)th element.
-     *
-     * Generally, Bezier curves are defined with 's', 't', 'i', and 'o', with the
-     * last element of the keyframes array normally having only 's' and 't'. In this format,
-     * any segment of a Bezier curve is defined by any element as the starting point of the
-     * segment and the following point as the endpoint. 's' is an option in the last element
-     * in the keyframe array for keyframe descriptions that use both 's' and 'e', where 'e' is
-     * the end-point of the Bezier curve.
+     * Value at this keyframe. Note the if the property is a scalar, keyframe values are still represented as arrays
      */
-    s?: number[] | Helpers.Bezier[];
+    s: number[];
     /**
      * End Value
      *
-     * Value at the end of the keyframe, note that this is deprecated and you should use `s` from the next keyframe to get this value
+     * Value at the end of the keyframe, note that this is deprecated and you should use s from the next keyframe to get this value
      *
      * @deprecated true
      */
@@ -96,6 +92,12 @@ export declare namespace AnimatedProperty {
    * Keyframe holding Bezier objects
    */
   interface ShapeKeyframe extends KeyframeBase {
+    /**
+     * Keyframe end value
+     *
+     * depends on "v"
+     */
+    e?: Helpers.Bezier;
     /**
      * Start
      */
