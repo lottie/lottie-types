@@ -17,8 +17,8 @@ The schema definitions have been synced with [marcusstenbeck/lottie-types](https
 
 ## Todo
 
-- [] auto-generate types from [lottie-docs/schema](https://lottiefiles.github.io/lottie-docs/schema/)
-- [] publish the final definition bundle to [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
+- auto-generate types from [lottie-docs/schema](https://lottiefiles.github.io/lottie-docs/schema/)
+- publish the final definition bundle to [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
 
 ## Contribution
 
