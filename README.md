@@ -1,6 +1,16 @@
 # lottie-types
 
-This repository contains type definitions for the Lottie animation format.
+## Installation
+
+```bash
+npm install --save @lottie-animation-community/lottie-types
+```
+
+## Summary
+
+This package contains type definitions for Lottie animation format
+
+## Details
 
 The project has been migrated from the [lottiefiles](https://github.com/lottiefiles) organization that has been used internally. The definition types have been built based on [lottie-docs/schema](https://lottiefiles.github.io/lottie-docs/schema/) with a few differences: firstly, some
 additional informative type comments have been added through testing the schema types with real Lottie data; secondly,
