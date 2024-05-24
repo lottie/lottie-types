@@ -2,4 +2,4 @@
 "@lottie-animation-community/lottie-types": major
 ---
 
-feat: migrate lottie-types project from lottiefiles
+feat: major v1.0.0 release

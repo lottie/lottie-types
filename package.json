@@ -1,7 +1,7 @@
 {
   "name": "@lottie-animation-community/lottie-types",
   "version": "0.0.0",
-  "description": "Type definitions for the Lottie animation format",
+  "description": "TypeScript definitions for Lottie animation format",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
@@ -18,13 +18,15 @@
     "changelog:version": "changeset version",
     "changelog:publish": "changeset publish"
   },
-  "repository": "https://github.com/lottie-animation-community/lottie-types",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lottie/lottie-types.git"
+  },
   "keywords": [
     "lottie",
-    "lottiefiles",
+    "lottie-animation-community",
     "lottie-schema",
-    "lottie-types",
-    "lottie-file-format"
+    "lottie-types"
   ],
   "author": "Aidos Sabit <https://github.com/aidosmf/>",
   "license": "MIT",
@@ -42,7 +44,6 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@lottie-animation-community",
-    "access": "restricted"
+    "access": "public"
   }
 }
