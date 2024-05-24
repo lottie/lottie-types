@@ -16,8 +16,7 @@
     "changelog": "changeset add",
     "changelog:check": "changeset status --since=main",
     "changelog:version": "changeset version",
-    "changelog:publish": "yarn build && changeset publish",
-    "release": "yarn changelog:version && yarn changelog:publish"
+    "changelog:publish": "changeset publish"
   },
   "repository": {
     "type": "git",
