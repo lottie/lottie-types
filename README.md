@@ -15,7 +15,7 @@ such as complicated conditionals, prefixItems, and some def reference scenarios.
 
 The schema definitions have been synced with [marcusstenbeck/lottie-types](https://github.com/marcusstenbeck/lottie-types) as well.
 
-## Todo
+## Plan
 
 - auto-generate types from [lottie-docs/schema](https://lottiefiles.github.io/lottie-docs/schema/)
 - publish the final definition bundle to [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
@@ -38,9 +38,7 @@ The following steps will get you setup to contribute changes to this repo:
 6. After merging to `main` the Github action will create another PR for only version bumping and changelog, which you
    have to merge the PR manually
 
-7. the package will be released after the merging
-
-8. Create a git tag locally and run `git push --follow-tags` to make it available in the origin
+7. the package will be released to the NPM and GitHub registry after the merging the Changeset PR
 
 ## Commands
 
@@ -57,4 +55,4 @@ The following steps will get you setup to contribute changes to this repo:
 
 ## License
 
-[MIT](./LICENSE) © [lottie-animation-community](https://github.com/lottie-animation-community)
+[MIT](./LICENSE) © [lottie-animation-community](https://github.com/lottie)
