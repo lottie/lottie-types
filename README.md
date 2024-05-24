@@ -1,16 +1,6 @@
 # lottie-types
 
-## Installation
-
-```bash
-npm install --save @lottie-animation-community/lottie-types
-```
-
-## Summary
-
-This package contains type definitions for Lottie animation format
-
-## Details
+This repository contains type definitions for the Lottie animation format.
 
 The project has been migrated from the [lottiefiles](https://github.com/lottiefiles) organization that has been used internally. The definition types have been built based on [lottie-docs/schema](https://lottiefiles.github.io/lottie-docs/schema/) with a few differences: firstly, some
 additional informative type comments have been added through testing the schema types with real Lottie data; secondly,
@@ -25,10 +15,10 @@ such as complicated conditionals, prefixItems, and some def reference scenarios.
 
 The schema definitions have been synced with [marcusstenbeck/lottie-types](https://github.com/marcusstenbeck/lottie-types) as well.
 
-## Plan
+## Todo
 
-- auto-generate types from [lottie-docs/schema](https://lottiefiles.github.io/lottie-docs/schema/)
-- publish the final definition bundle to [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
+- [] auto-generate types from [lottie-docs/schema](https://lottiefiles.github.io/lottie-docs/schema/)
+- [] publish the final definition bundle to [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
 
 ## Contribution
 
@@ -48,7 +38,9 @@ The following steps will get you setup to contribute changes to this repo:
 6. After merging to `main` the Github action will create another PR for only version bumping and changelog, which you
    have to merge the PR manually
 
-7. the package will be released to the NPM and GitHub registry after the merging the Changeset PR
+7. the package will be released after the merging
+
+8. Create a git tag locally and run `git push --follow-tags` to make it available in the origin
 
 ## Commands
 
@@ -65,4 +57,4 @@ The following steps will get you setup to contribute changes to this repo:
 
 ## License
 
-[MIT](./LICENSE) © [lottie-animation-community](https://github.com/lottie)
+[MIT](./LICENSE) © [lottie-animation-community](https://github.com/lottie-animation-community)
