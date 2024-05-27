@@ -68,13 +68,16 @@ export declare namespace Text {
   /**
    * Defines character shapes
    */
-  interface CharacterData extends Data {
+  interface CharacterData {
     data: CharacterShapes | CharacterPrecomp;
     /**
      * Character
      * @default ""
      */
     ch: string;
+    /**
+     * @default ""
+     */
     fFamily: FontFamily;
     /**
      * @default 0
@@ -132,19 +135,19 @@ export declare namespace Text {
     /**
      * Font CSS Class
      *
-     * A class applied to text objects using this font
+     * CSS class applied to text objects using this font
      */
     fClass?: Helpers.CssClass;
   }
 
   interface FontList {
-    list: Font[];
+    list?: Font[];
   }
 
   /**
    * Uses the path described by a layer mask to put the text on said path.
    */
-  interface MaskedPath {
+  interface FollowPath {
     /**
      * Mask
      *
@@ -178,7 +181,7 @@ export declare namespace Text {
   /**
    * Text Animator Data Property
    */
-  type AnimatorDataProperty = Helpers.Transform & {
+  type Style = Helpers.Transform & {
     /**
      * Stroke Width
      */
@@ -237,7 +240,18 @@ export declare namespace Text {
     ls?: A.Value;
   };
 
-  interface SelectorProperty {
+  /**
+   * Animated Text Document
+   * Animated property representing the text contents
+   */
+  interface AnimatedDocument extends Helpers.Expression {
+    k: DocumentKeyframe[];
+  }
+
+  /**
+   * Text Range Selector
+   */
+  interface Selector {
     /**
      * Expressible
      */
@@ -245,11 +259,11 @@ export declare namespace Text {
     /**
      * Max Ease
      */
-    xe: A.Value;
+    xe?: A.Value;
     /**
      * Min Ease
      */
-    ne: A.Value;
+    ne?: A.Value;
     /**
      * Max Amount
      */
@@ -261,7 +275,7 @@ export declare namespace Text {
     /**
      * Randomize
      */
-    rn: Helpers.IntegerBoolean;
+    rn?: Helpers.IntegerBoolean;
     /**
      * Shape
      */
@@ -269,7 +283,7 @@ export declare namespace Text {
     /**
      * Offset
      */
-    o: A.Value;
+    o?: A.Value;
     /**
      * Range Units
      *
@@ -288,26 +302,23 @@ export declare namespace Text {
      * End
      */
     e?: A.Value;
-    /**
-     * Mode
-     */
-    m?: TextType.RangeSelectorMode;
-  }
-
-  interface Selector extends Helpers.Name {
-    /**
-     * Transform
-     */
-    a?: {
-      s: A.Position;
-    };
-    s?: SelectorProperty;
   }
 
   /**
-   * Text More Options
+   * Range of text with custom animations and style
    */
-  interface MoreOptions {
+  interface Range extends Helpers.Name {
+    /**
+     * Transform
+     */
+    a?: Style;
+    s?: Selector;
+  }
+
+  /**
+   * Text Alignment Options
+   */
+  interface AlignmentOptions {
     /**
      * Alignment
      *
@@ -322,8 +333,6 @@ export declare namespace Text {
 
   /**
    * Text Document
-   *
-   * Note that for multi-line text, lines are separated by \\r
    */
   interface Document {
     /**
@@ -340,7 +349,6 @@ export declare namespace Text {
      * Stroke Color
      */
     sc?: Helpers.ColorRgba;
-
     /**
      * Stroke Width
      * @default 0
@@ -352,12 +360,15 @@ export declare namespace Text {
      */
     of?: boolean;
     /**
+     * Font Size
+     *
      * @default 10
      */
     s: FontSize;
     /**
-     * LineHeight
-     * Line height when wrapping
+     * Line Height
+     *
+     * Distance between lines on multiline or wrapped text
      */
     lh?: number;
     /**
@@ -375,7 +386,7 @@ export declare namespace Text {
     /**
      * Text
      *
-     * Text, note that newlines are encoded with \r
+     * Text, note that newlines are encoded with \\r
      * @default ''
      */
     t: string;
@@ -404,20 +415,20 @@ export declare namespace Text {
   }
 
   /**
+   * Text Document Keyframe
+   *
    * A keyframe containing a text document
    */
-  interface DataKeyframe {
+  interface DocumentKeyframe {
     /**
      * Start
      */
     s: Document;
     /**
-     * Time
-     *
      * Start time of keyframe segment.
-     * @default 0
      *
-     * */
+     * @default 0
+     */
     t: Helpers.Time;
   }
 
@@ -426,16 +437,10 @@ export declare namespace Text {
    *
    * Animated property representing the text contents
    */
-  interface Data extends Helpers.Expression {
-    k: DataKeyframe[];
-  }
-
-  type AnimatorDataProperties = AnimatorDataProperty | Selector;
-
-  interface AnimatorData {
-    a: AnimatorDataProperties[];
-    d: Data;
-    m: MoreOptions;
-    p: MaskedPath;
+  interface Data {
+    a: Range[];
+    d: AnimatedDocument;
+    m: AlignmentOptions;
+    p: FollowPath;
   }
 }
