@@ -84,8 +84,18 @@ export declare namespace Layer {
      * @default 0
      */
     ao?: Helpers.IntegerBoolean;
-    /** Matte mode, the layer will inherit the transparency from the layer above */
+    /**
+     * Matte mode, the layer will inherit the transparency from the layer above
+     * */
     tt?: MatteMode.Value;
+    /**
+     * Matte parent
+     *
+     * Index of the layer used as matte, if omitted assume the layer above the current one
+     *
+     * "type": "integer"
+     */
+    tp?: number;
     /**
      * Matte Target
      */
@@ -133,10 +143,6 @@ export declare namespace Layer {
      * tag name used by the SVG renderer
      */
     tg?: string;
-    /**
-     * Track matte parent
-     */
-    tp?: number;
   }
 
   /**
