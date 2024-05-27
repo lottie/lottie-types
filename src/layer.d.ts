@@ -222,7 +222,7 @@ export declare namespace Layer {
     /**
      * Data
      */
-    t: Text.AnimatorData;
+    t: Text.Data;
   }
 
   interface Camera extends Main {
