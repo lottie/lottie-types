@@ -246,6 +246,12 @@ export declare namespace Text {
    */
   interface AnimatedDocument extends Helpers.Expression {
     k: DocumentKeyframe[];
+    /**
+     * Slot ID
+     *
+     * One of the ID in the file's slots
+     */
+    sid?: Helpers.SlotID;
   }
 
   /**

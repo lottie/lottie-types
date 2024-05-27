@@ -223,4 +223,9 @@ export declare namespace Helpers {
      */
     v: number[][];
   }
+
+  /**
+   * One of the ID in the file's slots
+   */
+  type SlotID = string;
 }

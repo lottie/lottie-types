@@ -2,6 +2,7 @@ import { Asset } from "./asset";
 import { Layer } from "./layer";
 import { Text } from "./text";
 import { Helpers } from "./helpers";
+import { AnimatedProperty } from "./animated-property";
 
 /**
  * Defines named portions of the composition.
@@ -16,6 +17,23 @@ export type Marker = {
    * Duration
    */
   dr?: number;
+};
+
+/**
+ * Defines property / image asset overrides.
+ */
+export type Slot = {
+  /**
+   * Slot Property
+   */
+  p:
+    | AnimatedProperty.MultiDimensional
+    | AnimatedProperty.Color
+    | AnimatedProperty.Position
+    | AnimatedProperty.Shape
+    | AnimatedProperty.Value
+    | Text.AnimatedDocument
+    | Asset.Image;
 };
 
 /**
@@ -151,4 +169,10 @@ export interface Animation
    */
   markers?: Marker[];
   mb?: MotionBlur;
+  /**
+   * Available property overrides
+   */
+  slots?: {
+    [key: Helpers.SlotID]: Slot;
+  };
 }

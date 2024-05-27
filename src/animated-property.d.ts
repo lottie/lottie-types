@@ -125,6 +125,12 @@ export declare namespace AnimatedProperty {
       | Helpers.Bezier
       | number[]
       | number;
+    /**
+     * Slot ID
+     *
+     * One of the ID in the file's slots
+     */
+    sid?: Helpers.SlotID;
   }
 
   /**

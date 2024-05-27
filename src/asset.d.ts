@@ -56,6 +56,12 @@ export declare namespace Asset {
      * Marks as part of an image sequence if present
      */
     t?: "seq";
+    /**
+     * Slot ID
+     *
+     * One of the ID in the file's slots
+     */
+    sid?: Helpers.SlotID;
   }
 
   /**
