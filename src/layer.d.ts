@@ -133,6 +133,10 @@ export declare namespace Layer {
      * tag name used by the SVG renderer
      */
     tg?: string;
+    /**
+     * Track matte parent
+     */
+    tp?: number;
   }
 
   /**
