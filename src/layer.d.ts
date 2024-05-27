@@ -71,6 +71,9 @@ export declare namespace Layer {
   interface Visual extends Main {
     /**
      * Collapse Transform
+     *
+     * This is deprecated in favour of "ct"
+     * @deprecated true
      */
     cp?: boolean;
     /**
@@ -122,6 +125,13 @@ export declare namespace Layer {
      * Styling effects for this layer
      */
     sy?: Style.Value[];
+    /**
+     * Collapse Transform
+     *
+     * Marks that transforms should be applied before masks
+     * @default 0
+     */
+    ct?: Helpers.IntegerBoolean;
     /**
      * Blend Mode
      * @default 0
