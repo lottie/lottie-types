@@ -3,16 +3,16 @@ import { Helpers } from "./helpers";
 export declare namespace AnimatedProperty {
   /**
    * Bezier handle for keyframe interpolation
-   *
-   * Time component:\n0 means start time of the keyframe,\n1 means time of the next keyframe.
    */
   interface KeyframeBezierHandle {
     /**
+     * Time component:\n0 means start time of the keyframe,\n1 means time of the next keyframe.
+     *
      * @if type array
      * @then minItems: 1
      * @default 0
      */
-    x: Helpers.IntegerBoolean[] | Helpers.IntegerBoolean;
+    x: number[] | number;
     /**
      * Value interpolation component:\n0 means start value of the keyframe,\n1 means value at the next keyframe.
      *
@@ -20,7 +20,7 @@ export declare namespace AnimatedProperty {
      * @then minItems: 1
      * @default 0
      */
-    y: Helpers.IntegerBoolean[] | Helpers.IntegerBoolean;
+    y: number[] | number;
   }
 
   /**
@@ -45,7 +45,7 @@ export declare namespace AnimatedProperty {
      */
     h?: Helpers.IntegerBoolean;
     /**
-     * In Tanget
+     * In Tangent
      *
      * Easing tangent going into the next keyframe
      *
@@ -54,7 +54,7 @@ export declare namespace AnimatedProperty {
      */
     i?: KeyframeBezierHandle;
     /**
-     * Out Tanget
+     * Out Tangent
      *
      * Easing tangent leaving the current keyframe
      *
@@ -125,6 +125,12 @@ export declare namespace AnimatedProperty {
       | Helpers.Bezier
       | number[]
       | number;
+    /**
+     * Slot ID
+     *
+     * One of the ID in the file's slots
+     */
+    sid?: Helpers.SlotID;
   }
 
   /**

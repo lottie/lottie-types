@@ -71,6 +71,9 @@ export declare namespace Layer {
   interface Visual extends Main {
     /**
      * Collapse Transform
+     *
+     * This is deprecated in favour of "ct"
+     * @deprecated true
      */
     cp?: boolean;
     /**
@@ -84,8 +87,18 @@ export declare namespace Layer {
      * @default 0
      */
     ao?: Helpers.IntegerBoolean;
-    /** Matte mode, the layer will inherit the transparency from the layer above */
+    /**
+     * Matte mode, the layer will inherit the transparency from the layer above
+     * */
     tt?: MatteMode.Value;
+    /**
+     * Matte parent
+     *
+     * Index of the layer used as matte, if omitted assume the layer above the current one
+     *
+     * "type": "integer"
+     */
+    tp?: number;
     /**
      * Matte Target
      */
@@ -112,6 +125,13 @@ export declare namespace Layer {
      * Styling effects for this layer
      */
     sy?: Style.Value[];
+    /**
+     * Collapse Transform
+     *
+     * Marks that transforms should be applied before masks
+     * @default 0
+     */
+    ct?: Helpers.IntegerBoolean;
     /**
      * Blend Mode
      * @default 0
@@ -218,7 +238,7 @@ export declare namespace Layer {
     /**
      * Data
      */
-    t: Text.AnimatorData;
+    t: Text.Data;
   }
 
   interface Camera extends Main {
