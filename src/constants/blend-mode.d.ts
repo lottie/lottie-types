@@ -18,7 +18,9 @@ export declare namespace BlendMode {
     | Hue
     | Saturation
     | Color
-    | Luminosity;
+    | Luminosity
+    | Add
+    | HardMix;
 
   type Normal = 0;
   type Multiply = 1;
