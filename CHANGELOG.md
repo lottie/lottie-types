@@ -1,5 +1,15 @@
 # @lottie-animation-community/lottie-types
 
+## 1.2.0
+
+### Minor Changes
+
+- bda29aa: fix: properly generate schema with v1.1.0
+
+### Patch Changes
+
+- 404e17b: fix(blend-mode): include missing Add & HardMix"
+
 ## 1.1.0
 
 ### Minor Changes
