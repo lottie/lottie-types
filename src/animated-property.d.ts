@@ -104,7 +104,7 @@ export declare namespace AnimatedProperty {
     s: Helpers.Bezier[];
   }
 
-  interface Main
+  interface Property
     extends Helpers.PropertyIndex,
       Helpers.VisualObject,
       Helpers.Expression {
@@ -136,7 +136,7 @@ export declare namespace AnimatedProperty {
   /**
    * An animatable property that holds an array of numbers
    */
-  interface MultiDimensional extends Main, Helpers.Length {
+  interface MultiDimensional extends Property, Helpers.Length {
     /**
      * @if "a": { "const": 1  }
      * @then Animated value - Keyframe[];
@@ -148,7 +148,7 @@ export declare namespace AnimatedProperty {
   /**
    * An animatable property that holds a Color
    */
-  interface Color extends Main {
+  interface Color extends Property {
     /**
      * @if "a": { "const": 1  }
      * @then Animated value - Keyframe[];
@@ -197,7 +197,7 @@ export declare namespace AnimatedProperty {
   /**
    * An animatable property to represent a position in space
    */
-  interface Position extends Main, Helpers.Length {
+  interface Position extends Property, Helpers.Length {
     /**
      * @if "a": { "const": 1  }
      * @then Animated Value - PositionKeyframe[]
@@ -209,7 +209,7 @@ export declare namespace AnimatedProperty {
   /**
    * An animatable property that holds a Bezier
    */
-  interface Shape extends Main {
+  interface Shape extends Property {
     /**
      * @if "a": { "const": 1  }
      * @then Animated Value - ShapeKeyframe[]
@@ -221,7 +221,7 @@ export declare namespace AnimatedProperty {
   /**
    * An animatable property that holds a float
    */
-  interface Value extends Main {
+  interface Value extends Property {
     /**
      * @if "a": { "const": 1  }
      * @then Animated Value - Keyframe[]
