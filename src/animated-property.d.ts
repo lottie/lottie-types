@@ -209,7 +209,7 @@ export declare namespace AnimatedProperty {
   /**
    * An animatable property that holds a Bezier
    */
-  interface Shape extends Property {
+  interface BezierProperty extends Property {
     /**
      * @if "a": { "const": 1  }
      * @then Animated Value - ShapeKeyframe[]

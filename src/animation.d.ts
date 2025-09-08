@@ -30,7 +30,7 @@ export type Slot = {
     | AnimatedProperty.MultiDimensional
     | AnimatedProperty.Color
     | AnimatedProperty.Position
-    | AnimatedProperty.Shape
+    | AnimatedProperty.BezierProperty
     | AnimatedProperty.Value
     | Text.AnimatedDocument
     | Asset.Image;

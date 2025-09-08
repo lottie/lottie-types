@@ -188,8 +188,10 @@ export declare namespace Shape {
     ty: ShapeType.Path;
     /**
      * Shape
+     *
+     * Bezier Path
      */
-    ks: A.Shape;
+    ks: A.BezierProperty;
     ind?: Helpers.Index;
   }
 

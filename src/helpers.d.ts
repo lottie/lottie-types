@@ -174,7 +174,7 @@ export declare namespace Helpers {
     /**
      * Mask Vertices
      */
-    pt?: A.Shape;
+    pt?: A.BezierProperty;
     /**
      * Opacity
      */
