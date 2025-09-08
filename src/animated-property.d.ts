@@ -91,17 +91,23 @@ export declare namespace AnimatedProperty {
   /**
    * Keyframe holding Bezier objects
    */
-  interface ShapeKeyframe extends KeyframeBase {
+  interface BezierKeyframe extends KeyframeBase {
     /**
-     * Keyframe end value
+     * End Value
      *
-     * depends on "v"
+     * Value at the end of the keyframe, note that this is deprecated and you should use s from the next keyframe to get this value
+     *
+     * Depends on "v"
+     *
+     * @deprecated true
      */
-    e?: Helpers.Bezier;
+    e?: [Helpers.Bezier];
     /**
-     * Start
+     * Value
+     *
+     * Value at this keyframe
      */
-    s: Helpers.Bezier[];
+    s: [Helpers.Bezier];
   }
 
   interface Property
@@ -121,7 +127,7 @@ export declare namespace AnimatedProperty {
     k:
       | Keyframe[]
       | Helpers.ColorRgba
-      | ShapeKeyframe[]
+      | BezierKeyframe[]
       | Helpers.Bezier
       | number[]
       | number;
@@ -215,7 +221,7 @@ export declare namespace AnimatedProperty {
      * @then Animated Value - ShapeKeyframe[]
      * @else Static Value - Bezier
      */
-    k: ShapeKeyframe[] | Helpers.Bezier;
+    k: BezierKeyframe[] | Helpers.Bezier;
   }
 
   /**
