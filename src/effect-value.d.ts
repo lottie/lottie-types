@@ -2,6 +2,7 @@ import { AnimatedProperty as A } from "./animated-property";
 import { Helpers } from "./helpers";
 import { EffectValueType } from "./constants/effect-value-type";
 
+export declare type EffectValue = EffectValue.Value;
 export declare namespace EffectValue {
   interface Main extends Helpers.VisualObject, Helpers.PropertyIndex {
     ty?: EffectValueType.Value;

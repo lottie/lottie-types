@@ -1,16 +1,22 @@
-export declare namespace GradientType {
-  /**
-   * Type of a gradient
-   *
-   * @default 1
-   */
-  type Value = Linear | Radial;
+import { Helpers } from "../helpers";
 
-  type Linear = 1;
-  type Radial = 2;
+/**
+ * Type of a gradient
+ *
+ * @default 1
+ */
+export type GradientType = Helpers.Values<typeof GradientType>;
+export namespace GradientType {
+  export type Value = GradientType;
 
-  const enum VALUE {
-    LINEAR = 1,
-    RADIAL = 2,
+  export const Linear = 1;
+  export type Linear = typeof Linear;
+  export const Radial = 2;
+  export type Radial = typeof Radial;
+
+  /** @deprecated Use the {@linkcode GradientType} namespace */
+  export const enum VALUE {
+    LINEAR = Linear,
+    RADIAL = Radial,
   }
 }

@@ -1,20 +1,29 @@
-export declare namespace MatteMode {
-  /**
-   * How a layer should mask another layer
-   */
-  type Value = Normal | Alpha | InvertedAlpha | Luma | InvertedLuma;
+import { Helpers } from "../helpers";
 
-  type Normal = 0;
-  type Alpha = 1;
-  type InvertedAlpha = 2;
-  type Luma = 3;
-  type InvertedLuma = 4;
+/**
+ * How a layer should mask another layer
+ */
+export type MatteMode = Helpers.Values<typeof MatteMode>;
+export namespace MatteMode {
+  export type Value = MatteMode;
 
-  const enum VALUE {
-    NORMAL = 0,
-    ALPHA = 1,
-    INVERTED_ALPHA = 2,
-    LUMA = 3,
-    INVERTED_LUMA = 4,
+  export const Normal = 0;
+  export type Normal = typeof Normal;
+  export const Alpha = 1;
+  export type Alpha = typeof Alpha;
+  export const InvertedAlpha = 2;
+  export type InvertedAlpha = typeof InvertedAlpha;
+  export const Luma = 3;
+  export type Luma = typeof Luma;
+  export const InvertedLuma = 4;
+  export type InvertedLuma = typeof InvertedLuma;
+
+  /** @deprecated Use the {@linkcode MatteMode} namespace */
+  export const enum VALUE {
+    NORMAL = Normal,
+    ALPHA = Alpha,
+    INVERTED_ALPHA = InvertedAlpha,
+    LUMA = Luma,
+    INVERTED_LUMA = InvertedLuma,
   }
 }

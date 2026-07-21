@@ -1,16 +1,23 @@
-export declare namespace LineCap {
-  /**
-   * Style at the end of a stoked line
-   */
-  type Value = Butt | Round | Square;
+import { Helpers } from "../helpers";
 
-  type Butt = 1;
-  type Round = 2;
-  type Square = 3;
+/**
+ * Style at the end of a stoked line
+ */
+export type LineCap = Helpers.Values<typeof LineCap>;
+export namespace LineCap {
+  export type Value = LineCap;
 
-  const enum VALUE {
-    BUTT = 1,
-    ROUND = 2,
-    SQUARE = 3,
+  export const Butt = 1;
+  export type Butt = typeof Butt;
+  export const Round = 2;
+  export type Round = typeof Round;
+  export const Square = 3;
+  export type Square = typeof Square;
+
+  /** @deprecated Use the {@linkcode LineCap} namespace */
+  export const enum VALUE {
+    BUTT = Butt,
+    ROUND = Round,
+    SQUARE = Square,
   }
 }

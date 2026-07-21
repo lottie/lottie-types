@@ -1,55 +1,59 @@
-export declare namespace LayerType {
-  type Value =
-    | Precomposition
-    | SolidColor
-    | Image
-    | Null
-    | Shape
-    | Text
-    | Audio
-    | VideoPlaceholder
-    | ImageSequence
-    | Video
-    | ImagePlaceholder
-    | Guide
-    | Adjustment
-    | Camera
-    | Light
-    | Data;
+import { Helpers } from "../helpers";
 
-  type Precomposition = 0;
-  type SolidColor = 1;
-  type Image = 2;
-  type Null = 3;
-  type Shape = 4;
-  type Text = 5;
-  type Audio = 6;
-  type VideoPlaceholder = 7;
-  type ImageSequence = 8;
-  type Video = 9;
-  type ImagePlaceholder = 10;
-  type Guide = 11;
-  type Adjustment = 12;
-  type Camera = 13;
-  type Light = 14;
-  type Data = 15;
+export type LayerType = Helpers.Values<typeof LayerType>;
+export namespace LayerType {
+  export type Value = LayerType;
 
-  const enum VALUE {
-    PRECOMPOSITION = 0,
-    SOLID_COLOR = 1,
-    IMAGE = 2,
-    NULL = 3,
-    SHAPE = 4,
-    TEXT = 5,
-    AUDIO = 6,
-    VIDEO_PLACEHOLDER = 7,
-    IMAGE_SEQUENCE = 8,
-    VIDEO = 9,
-    IMAGE_PLACEHOLDER = 10,
-    GUIDE = 11,
-    ADJUSTMENT = 12,
-    CAMERA = 13,
-    LIGHT = 14,
-    DATA = 15,
+  export const Precomposition = 0;
+  export type Precomposition = typeof Precomposition;
+  export const SolidColor = 1;
+  export type SolidColor = typeof SolidColor;
+  export const Image = 2;
+  export type Image = typeof Image;
+  export const Null = 3;
+  export type Null = typeof Null;
+  export const Shape = 4;
+  export type Shape = typeof Shape;
+  export const Text = 5;
+  export type Text = typeof Text;
+  export const Audio = 6;
+  export type Audio = typeof Audio;
+  export const VideoPlaceholder = 7;
+  export type VideoPlaceholder = typeof VideoPlaceholder;
+  export const ImageSequence = 8;
+  export type ImageSequence = typeof ImageSequence;
+  export const Video = 9;
+  export type Video = typeof Video;
+  export const ImagePlaceholder = 10;
+  export type ImagePlaceholder = typeof ImagePlaceholder;
+  export const Guide = 11;
+  export type Guide = typeof Guide;
+  export const Adjustment = 12;
+  export type Adjustment = typeof Adjustment;
+  export const Camera = 13;
+  export type Camera = typeof Camera;
+  export const Light = 14;
+  export type Light = typeof Light;
+  export const Data = 15;
+  export type Data = typeof Data;
+
+  /** @deprecated Use the {@linkcode LayerType} namespace */
+  export const enum VALUE {
+    PRECOMPOSITION = Precomposition,
+    SOLID_COLOR = SolidColor,
+    IMAGE = Image,
+    NULL = Null,
+    SHAPE = Shape,
+    TEXT = Text,
+    AUDIO = Audio,
+    VIDEO_PLACEHOLDER = VideoPlaceholder,
+    IMAGE_SEQUENCE = ImageSequence,
+    VIDEO = Video,
+    IMAGE_PLACEHOLDER = ImagePlaceholder,
+    GUIDE = Guide,
+    ADJUSTMENT = Adjustment,
+    CAMERA = Camera,
+    LIGHT = Light,
+    DATA = Data,
   }
 }

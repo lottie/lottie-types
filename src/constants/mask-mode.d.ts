@@ -1,24 +1,35 @@
-export declare namespace MaskMode {
-  /**
-   * How masks interact with each other. See https://helpx.adobe.com/after-effects/using/alpha-channels-masks-mattes.html
-   */
-  type Value = No | Add | Subtract | Intersect | Lighten | Darken | Difference;
+import { Helpers } from "../helpers";
 
-  type No = "n";
-  type Add = "a";
-  type Subtract = "s";
-  type Intersect = "i";
-  type Lighten = "l";
-  type Darken = "d";
-  type Difference = "f";
+/**
+ * How masks interact with each other. See https://helpx.adobe.com/after-effects/using/alpha-channels-masks-mattes.html
+ */
+export type MaskMode = Helpers.Values<typeof MaskMode>;
+export namespace MaskMode {
+  export type Value = MaskMode;
 
-  const enum VALUE {
-    NO = "n",
-    ADD = "a",
-    SUBTRACT = "s",
-    INTERSECT = "i",
-    LIGHTEN = "l",
-    DARKEN = "d",
-    DIFFERENCE = "f",
+  export const No = "n";
+  export type No = typeof No;
+  export const Add = "a";
+  export type Add = typeof Add;
+  export const Subtract = "s";
+  export type Subtract = typeof Subtract;
+  export const Intersect = "i";
+  export type Intersect = typeof Intersect;
+  export const Lighten = "l";
+  export type Lighten = typeof Lighten;
+  export const Darken = "d";
+  export type Darken = typeof Darken;
+  export const Difference = "f";
+  export type Difference = typeof Difference;
+
+  /** @deprecated Use the {@linkcode MaskMode} namespace */
+  export const enum VALUE {
+    NO = No,
+    ADD = Add,
+    SUBTRACT = Subtract,
+    INTERSECT = Intersect,
+    LIGHTEN = Lighten,
+    DARKEN = Darken,
+    DIFFERENCE = Difference,
   }
 }

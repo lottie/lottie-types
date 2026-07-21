@@ -1,5 +1,6 @@
 import { Helpers } from "./helpers";
 
+export declare type AnimatedProperty = AnimatedProperty.Value;
 export declare namespace AnimatedProperty {
   /**
    * Bezier handle for keyframe interpolation

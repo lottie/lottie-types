@@ -228,4 +228,14 @@ export declare namespace Helpers {
    * One of the ID in the file's slots
    */
   type SlotID = string;
+
+  /**
+   * Used for record enums. Excludes uppercase keys used for backwards compatibility from the record.
+   */
+  type Values<T extends Record<string, any>> = T extends Record<infer K, any>
+    ? K extends string
+      ? T[ExcludeUppercase<K>]
+      : never
+    : never;
+  type ExcludeUppercase<T extends string> = T extends Uppercase<T> ? never : T;
 }

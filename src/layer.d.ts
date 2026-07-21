@@ -8,6 +8,7 @@ import { Effect } from "./effect";
 import { Shape } from "./shape";
 import { Style } from "./style";
 
+export declare type Layer = Layer.Value;
 export declare namespace Layer {
   interface Main extends Helpers.VisualObject, Helpers.Threedimensional {
     /**

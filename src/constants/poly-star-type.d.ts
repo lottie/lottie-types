@@ -1,14 +1,20 @@
-export declare namespace PolyStarType {
-  /**
-   * Star type, `1` for Star, `2` for Polygon
-   */
-  type Value = Star | Polygon;
+import { Helpers } from "../helpers";
 
-  type Star = 1;
-  type Polygon = 2;
+/**
+ * Star type, `1` for Star, `2` for Polygon
+ */
+export type PolyStarType = Helpers.Values<typeof PolyStarType>;
+export namespace PolyStarType {
+  export type Value = PolyStarType;
 
-  const enum VALUE {
-    STAR = 1,
-    POLYGON = 2,
+  export const Star = 1;
+  export type Star = typeof Star;
+  export const Polygon = 2;
+  export type Polygon = typeof Polygon;
+
+  /** @deprecated Use the {@linkcode PolyStarType} namespace */
+  export const enum VALUE {
+    STAR = Star,
+    POLYGON = Polygon,
   }
 }

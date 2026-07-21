@@ -12,8 +12,9 @@ import { Composite } from "./constants/composite";
 import { TrimMultipleShapes } from "./constants/trim-multiple-shapes";
 import { PolyStarType } from "./constants/poly-star-type";
 
+export declare type Shape = Shape.Value;
 export declare namespace Shape {
-  type Opacity = A.Value;
+  type Opacity = A;
 
   /**
    * Base class for all elements of ShapeLayer and Group

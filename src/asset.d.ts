@@ -1,6 +1,7 @@
 import { Composition } from "./animation";
 import { Helpers } from "./helpers";
 
+export declare type Asset = Asset.Value;
 export declare namespace Asset {
   interface Main extends Helpers.Name {
     /**

@@ -2,6 +2,7 @@ import { Helpers } from "./helpers";
 import { EffectValue as E } from "./effect-value";
 import { EffectType } from "./constants/effect-type";
 
+export declare type Effect = Effect.Value;
 export declare namespace Effect {
   interface Main extends Helpers.VisualObject, Helpers.PropertyIndex {
     /** Effect Parameters */

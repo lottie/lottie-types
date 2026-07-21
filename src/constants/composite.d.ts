@@ -1,14 +1,20 @@
-export declare namespace Composite {
-  /**
-   * How to stack copies in a repeater
-   */
-  type Value = Above | Below;
+import { Helpers } from "../helpers";
 
-  type Above = 1;
-  type Below = 2;
+/**
+ * How to stack copies in a repeater
+ */
+export type Composite = Helpers.Values<typeof Composite>;
+export namespace Composite {
+  export type Value = Composite;
 
-  const enum VALUE {
-    ABOVE = 1,
-    BELOW = 2,
+  export const Above = 1;
+  export type Above = typeof Above;
+  export const Below = 2;
+  export type Below = typeof Below;
+
+  /** @deprecated Use the {@linkcode Composite} namespace */
+  export const enum VALUE {
+    ABOVE = Above,
+    BELOW = Below,
   }
 }

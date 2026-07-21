@@ -1,27 +1,34 @@
-export declare namespace ShapeDirection {
-  /**
-   * Drawing direction of the shape curve, useful for trim path
-   */
-  type Value = Normal | Clockwise | ClockwiseReversed;
+import { Helpers } from "../helpers";
+
+/**
+ * Drawing direction of the shape curve, useful for trim path
+ */
+export type ShapeDirection = Helpers.Values<typeof ShapeDirection>;
+export namespace ShapeDirection {
+  export type Value = ShapeDirection;
 
   /**
    * Default Clockwise
    */
-  type Normal = 0;
+  export const Normal = 0;
+  export type Normal = typeof Normal;
 
   /**
    * Usually clockwise
    */
-  type Clockwise = 1;
+  export const Clockwise = 1;
+  export type Clockwise = typeof Clockwise;
 
   /**
    * Usually counter clockwise
    */
-  type ClockwiseReversed = 3;
+  export const ClockwiseReversed = 3;
+  export type ClockwiseReversed = typeof ClockwiseReversed;
 
-  const enum VALUE {
-    NORMAL = 0,
-    CLOCKWISE = 1,
-    CLOCKWISE_REVERSED = 3,
+  /** @deprecated Use the {@linkcode ShapeDirection} namespace */
+  export const enum VALUE {
+    NORMAL = Normal,
+    CLOCKWISE = Clockwise,
+    CLOCKWISE_REVERSED = ClockwiseReversed,
   }
 }

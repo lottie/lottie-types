@@ -1,5 +1,6 @@
 import dts from "rollup-plugin-dts";
-import pkg from "./package.json";
+import typescript from "@rollup/plugin-typescript";
+import pkg from "./package.json" with { type: "json" };
 
 const compiledAt = new Date().toUTCString().replace(/GMT/g, "UTC");
 
@@ -26,7 +27,19 @@ const banner = [
 
 const config = [
   {
-    input: "./src/index.d.ts",
+    input: "./src/index.ts",
+    output: [
+      {
+        banner,
+        file: "./index.js",
+        format: "es",
+        sourcemap: true,
+      },
+    ],
+    plugins: [typescript({ tsconfig: "./tsconfig.json" })],
+  },
+  {
+    input: "./src/index.ts",
     output: [{ banner, file: "./index.d.ts", format: "es" }],
     plugins: [dts()],
   },

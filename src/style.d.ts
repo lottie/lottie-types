@@ -3,6 +3,7 @@ import { Helpers } from "./helpers";
 import { LayerStyleType } from "./constants/layer-style-type";
 import { GradientType } from "./constants/gradient-type";
 
+export declare type Style = Style.Value;
 export declare namespace Style {
   type OpacityValue = A.Value;
 
