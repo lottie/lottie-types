@@ -22,7 +22,7 @@ export namespace EffectValueType {
   export type Layer = typeof Layer;
 
   /** @deprecated Use the {@linkcode EffectValueType} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     SLIDER = Slider,
     ANGLE = Angle,
     COLOR = Color,

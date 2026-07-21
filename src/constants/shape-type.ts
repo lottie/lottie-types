@@ -44,7 +44,7 @@ export namespace ShapeType {
   export type Trim = typeof Trim;
 
   /** @deprecated Use the {@linkcode ShapeType} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     RECTANGLE = Rectangle,
     ELLIPSE = Ellipse,
     POLYGON_STAR = PolygonStar,

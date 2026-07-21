@@ -13,7 +13,7 @@ export namespace Composite {
   export type Below = typeof Below;
 
   /** @deprecated Use the {@linkcode Composite} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     ABOVE = Above,
     BELOW = Below,
   }

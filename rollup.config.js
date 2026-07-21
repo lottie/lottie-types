@@ -35,6 +35,13 @@ const config = [
         format: "es",
         sourcemap: true,
       },
+      {
+        banner,
+        exports: "named",
+        file: "./index.cjs",
+        format: "cjs",
+        sourcemap: true,
+      },
     ],
     plugins: [typescript({ tsconfig: "./tsconfig.json" })],
   },

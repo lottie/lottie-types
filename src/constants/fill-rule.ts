@@ -13,7 +13,7 @@ export namespace FillRule {
   export type EvenOdd = typeof EvenOdd;
 
   /** @deprecated Use the {@linkcode FillRule} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     NON_ZERO = NonZero,
     EVEN_ODD = EvenOdd,
   }

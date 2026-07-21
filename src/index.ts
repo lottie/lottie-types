@@ -17,14 +17,14 @@ export { TextType } from "./constants/text-type";
 export { TrimMultipleShapes } from "./constants/trim-multiple-shapes";
 export { LayerStyleType } from "./constants/layer-style-type";
 
-export { AnimatedProperty } from "./animated-property";
-export { Asset } from "./asset";
-export { EffectValue } from "./effect-value";
-export { Effect } from "./effect";
-export { Helpers } from "./helpers";
-export { Layer } from "./layer";
-export { Shape } from "./shape";
-export { Text } from "./text";
-export { Style } from "./style";
+export type { AnimatedProperty } from "./animated-property";
+export type { Asset } from "./asset";
+export type { EffectValue } from "./effect-value";
+export type { Effect } from "./effect";
+export type { Helpers } from "./helpers";
+export type { Layer } from "./layer";
+export type { Shape } from "./shape";
+export type { Text } from "./text";
+export type { Style } from "./style";
 
-export * from "./animation";
+export type * from "./animation";

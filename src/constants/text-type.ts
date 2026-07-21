@@ -1,6 +1,14 @@
 import { Helpers } from "../helpers";
 
-export type TextType = Helpers.Values<typeof TextType>;
+export type TextType =
+  | TextType.Based
+  | TextType.Caps
+  | TextType.Grouping
+  | TextType.Justify
+  | TextType.Shape
+  | TextType.FontPathOrigin
+  | TextType.VerticalJustify
+  | TextType.RangeSelectorMode;
 export namespace TextType {
   export type Based = Helpers.Values<typeof Based>;
   export namespace Based {
@@ -204,6 +212,15 @@ export namespace TextType {
   /** @deprecated Use {@linkcode TextType.Based.Lines} */
   export const Lines = Based.Lines;
   export type Lines = typeof Lines;
+  /** @deprecated Use {@linkcode TextType.Caps.Regular} */
+  export const Regular = Caps.Regular;
+  export type Regular = typeof Regular;
+  /** @deprecated Use {@linkcode TextType.Caps.AllCaps} */
+  export const AllCaps = Caps.AllCaps;
+  export type AllCaps = typeof AllCaps;
+  /** @deprecated Use {@linkcode TextType.Caps.SmallCaps} */
+  export const SmallCaps = Caps.SmallCaps;
+  export type SmallCaps = typeof SmallCaps;
   /** @deprecated Use {@linkcode TextType.Grouping.Word} */
   export const Word = Grouping.Word;
   export type Word = typeof Word;

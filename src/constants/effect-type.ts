@@ -38,7 +38,7 @@ export namespace EffectType {
   export type Puppet = typeof Puppet;
 
   /** @deprecated Use the {@linkcode EffectType} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     CUSTOM = Custom,
     PAINT_OVER_TRANSPARENT = PaintOverTransparent,
     TINT = Tint,

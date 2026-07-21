@@ -1,18 +1,35 @@
 {
   "name": "@lottie-animation-community/lottie-types",
   "version": "1.2.0",
-  "description": "TypeScript definitions for Lottie animation format",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "description": "TypeScript definitions and runtime constants for the Lottie animation format",
+  "type": "module",
+  "main": "./index.cjs",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
-    "index.d.ts"
+    "index.d.ts",
+    "index.js",
+    "index.js.map",
+    "index.cjs",
+    "index.cjs.map"
   ],
   "scripts": {
-    "clean": "rm -rf index.d.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format:prettier": "prettier --loglevel=warn --no-editorconfig --write .",
+    "clean": "rm -f index.d.ts index.js index.js.map index.cjs index.cjs.map",
+    "test": "yarn build && yarn test:types && yarn test:runtime",
+    "test:types": "tsc --noEmit -p test/tsconfig.json",
+    "test:runtime": "node test/runtime.mjs && node test/runtime.cjs",
+    "format:prettier": "prettier --log-level=warn --no-editorconfig --write .",
     "build": "yarn clean && rollup -c",
-    "prepare": "husky install",
+    "prepare": "husky",
     "changelog": "changeset add",
     "changelog:check": "changeset status --since=main",
     "changelog:version": "changeset version",
@@ -39,6 +56,7 @@
     "prettier": "^3.5.3",
     "rollup": "^4.38.0",
     "rollup-plugin-dts": "^6.2.1",
+    "tslib": "^2.8.1",
     "typescript": "^5.8.2"
   },
   "lint-staged": {

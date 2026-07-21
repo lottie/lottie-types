@@ -16,7 +16,9 @@
  * To report an issue with these types, please open a support ticket at:
  * https://github.com/lottie-animation-community/lottie-types/issues
  */
-var BlendMode;
+'use strict';
+
+exports.BlendMode = void 0;
 (function (BlendMode) {
     BlendMode.Normal = 0;
     BlendMode.Multiply = 1;
@@ -56,9 +58,9 @@ var BlendMode;
         VALUE[VALUE["ADD"] = 16] = "ADD";
         VALUE[VALUE["HARD_MIX"] = 17] = "HARD_MIX";
     })(BlendMode.VALUE || (BlendMode.VALUE = {}));
-})(BlendMode || (BlendMode = {}));
+})(exports.BlendMode || (exports.BlendMode = {}));
 
-var Composite;
+exports.Composite = void 0;
 (function (Composite) {
     Composite.Above = 1;
     Composite.Below = 2;
@@ -66,9 +68,9 @@ var Composite;
         VALUE[VALUE["ABOVE"] = 1] = "ABOVE";
         VALUE[VALUE["BELOW"] = 2] = "BELOW";
     })(Composite.VALUE || (Composite.VALUE = {}));
-})(Composite || (Composite = {}));
+})(exports.Composite || (exports.Composite = {}));
 
-var EffectValueType;
+exports.EffectValueType = void 0;
 (function (EffectValueType) {
     EffectValueType.Slider = 0;
     EffectValueType.Angle = 1;
@@ -88,9 +90,9 @@ var EffectValueType;
         VALUE[VALUE["DROPDOWN"] = 7] = "DROPDOWN";
         VALUE[VALUE["LAYER"] = 10] = "LAYER";
     })(EffectValueType.VALUE || (EffectValueType.VALUE = {}));
-})(EffectValueType || (EffectValueType = {}));
+})(exports.EffectValueType || (exports.EffectValueType = {}));
 
-var EffectType;
+exports.EffectType = void 0;
 (function (EffectType) {
     EffectType.Custom = 5;
     EffectType.PaintOverTransparent = 7;
@@ -126,9 +128,9 @@ var EffectType;
         VALUE[VALUE["SPHERIZE"] = 33] = "SPHERIZE";
         VALUE[VALUE["PUPPET"] = 34] = "PUPPET";
     })(EffectType.VALUE || (EffectType.VALUE = {}));
-})(EffectType || (EffectType = {}));
+})(exports.EffectType || (exports.EffectType = {}));
 
-var FillRule;
+exports.FillRule = void 0;
 (function (FillRule) {
     FillRule.NonZero = 1;
     FillRule.EvenOdd = 2;
@@ -136,9 +138,9 @@ var FillRule;
         VALUE[VALUE["NON_ZERO"] = 1] = "NON_ZERO";
         VALUE[VALUE["EVEN_ODD"] = 2] = "EVEN_ODD";
     })(FillRule.VALUE || (FillRule.VALUE = {}));
-})(FillRule || (FillRule = {}));
+})(exports.FillRule || (exports.FillRule = {}));
 
-var GradientType;
+exports.GradientType = void 0;
 (function (GradientType) {
     GradientType.Linear = 1;
     GradientType.Radial = 2;
@@ -146,9 +148,9 @@ var GradientType;
         VALUE[VALUE["LINEAR"] = 1] = "LINEAR";
         VALUE[VALUE["RADIAL"] = 2] = "RADIAL";
     })(GradientType.VALUE || (GradientType.VALUE = {}));
-})(GradientType || (GradientType = {}));
+})(exports.GradientType || (exports.GradientType = {}));
 
-var LayerType;
+exports.LayerType = void 0;
 (function (LayerType) {
     LayerType.Precomposition = 0;
     LayerType.SolidColor = 1;
@@ -184,9 +186,9 @@ var LayerType;
         VALUE[VALUE["LIGHT"] = 14] = "LIGHT";
         VALUE[VALUE["DATA"] = 15] = "DATA";
     })(LayerType.VALUE || (LayerType.VALUE = {}));
-})(LayerType || (LayerType = {}));
+})(exports.LayerType || (exports.LayerType = {}));
 
-var LineCap;
+exports.LineCap = void 0;
 (function (LineCap) {
     LineCap.Butt = 1;
     LineCap.Round = 2;
@@ -196,9 +198,9 @@ var LineCap;
         VALUE[VALUE["ROUND"] = 2] = "ROUND";
         VALUE[VALUE["SQUARE"] = 3] = "SQUARE";
     })(LineCap.VALUE || (LineCap.VALUE = {}));
-})(LineCap || (LineCap = {}));
+})(exports.LineCap || (exports.LineCap = {}));
 
-var LineJoin;
+exports.LineJoin = void 0;
 (function (LineJoin) {
     LineJoin.Miter = 1;
     LineJoin.Round = 2;
@@ -208,9 +210,9 @@ var LineJoin;
         VALUE[VALUE["ROUND"] = 2] = "ROUND";
         VALUE[VALUE["BEVEL"] = 3] = "BEVEL";
     })(LineJoin.VALUE || (LineJoin.VALUE = {}));
-})(LineJoin || (LineJoin = {}));
+})(exports.LineJoin || (exports.LineJoin = {}));
 
-var MaskMode;
+exports.MaskMode = void 0;
 (function (MaskMode) {
     MaskMode.No = "n";
     MaskMode.Add = "a";
@@ -228,9 +230,9 @@ var MaskMode;
         VALUE["DARKEN"] = "d";
         VALUE["DIFFERENCE"] = "f";
     })(MaskMode.VALUE || (MaskMode.VALUE = {}));
-})(MaskMode || (MaskMode = {}));
+})(exports.MaskMode || (exports.MaskMode = {}));
 
-var MatteMode;
+exports.MatteMode = void 0;
 (function (MatteMode) {
     MatteMode.Normal = 0;
     MatteMode.Alpha = 1;
@@ -244,9 +246,9 @@ var MatteMode;
         VALUE[VALUE["LUMA"] = 3] = "LUMA";
         VALUE[VALUE["INVERTED_LUMA"] = 4] = "INVERTED_LUMA";
     })(MatteMode.VALUE || (MatteMode.VALUE = {}));
-})(MatteMode || (MatteMode = {}));
+})(exports.MatteMode || (exports.MatteMode = {}));
 
-var PolyStarType;
+exports.PolyStarType = void 0;
 (function (PolyStarType) {
     PolyStarType.Star = 1;
     PolyStarType.Polygon = 2;
@@ -254,9 +256,9 @@ var PolyStarType;
         VALUE[VALUE["STAR"] = 1] = "STAR";
         VALUE[VALUE["POLYGON"] = 2] = "POLYGON";
     })(PolyStarType.VALUE || (PolyStarType.VALUE = {}));
-})(PolyStarType || (PolyStarType = {}));
+})(exports.PolyStarType || (exports.PolyStarType = {}));
 
-var ShapeDirection;
+exports.ShapeDirection = void 0;
 (function (ShapeDirection) {
     /**
      * Default Clockwise
@@ -275,9 +277,9 @@ var ShapeDirection;
         VALUE[VALUE["CLOCKWISE"] = 1] = "CLOCKWISE";
         VALUE[VALUE["CLOCKWISE_REVERSED"] = 3] = "CLOCKWISE_REVERSED";
     })(ShapeDirection.VALUE || (ShapeDirection.VALUE = {}));
-})(ShapeDirection || (ShapeDirection = {}));
+})(exports.ShapeDirection || (exports.ShapeDirection = {}));
 
-var ShapeType;
+exports.ShapeType = void 0;
 (function (ShapeType) {
     ShapeType.Rectangle = "rc";
     ShapeType.Ellipse = "el";
@@ -319,9 +321,9 @@ var ShapeType;
         VALUE["REPEATER"] = "rp";
         VALUE["TRIM"] = "tm";
     })(ShapeType.VALUE || (ShapeType.VALUE = {}));
-})(ShapeType || (ShapeType = {}));
+})(exports.ShapeType || (exports.ShapeType = {}));
 
-var StrokeDashType;
+exports.StrokeDashType = void 0;
 (function (StrokeDashType) {
     StrokeDashType.Default = "d";
     StrokeDashType.Gap = "g";
@@ -331,9 +333,9 @@ var StrokeDashType;
         VALUE["GAP"] = "g";
         VALUE["OFFSET"] = "o";
     })(StrokeDashType.VALUE || (StrokeDashType.VALUE = {}));
-})(StrokeDashType || (StrokeDashType = {}));
+})(exports.StrokeDashType || (exports.StrokeDashType = {}));
 
-var TextType;
+exports.TextType = void 0;
 (function (TextType) {
     let Based;
     (function (Based) {
@@ -521,9 +523,9 @@ var TextType;
     TextType.Max = RangeSelectorMode.Max;
     /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Difference} */
     TextType.Difference = RangeSelectorMode.Difference;
-})(TextType || (TextType = {}));
+})(exports.TextType || (exports.TextType = {}));
 
-var TrimMultipleShapes;
+exports.TrimMultipleShapes = void 0;
 (function (TrimMultipleShapes) {
     TrimMultipleShapes.Individually = 1;
     TrimMultipleShapes.Simultaneously = 2;
@@ -531,9 +533,9 @@ var TrimMultipleShapes;
         VALUES[VALUES["INDIVIDUALLY"] = 1] = "INDIVIDUALLY";
         VALUES[VALUES["SIMULTANEOUSLY"] = 2] = "SIMULTANEOUSLY";
     })(TrimMultipleShapes.VALUES || (TrimMultipleShapes.VALUES = {}));
-})(TrimMultipleShapes || (TrimMultipleShapes = {}));
+})(exports.TrimMultipleShapes || (exports.TrimMultipleShapes = {}));
 
-var LayerStyleType;
+exports.LayerStyleType = void 0;
 (function (LayerStyleType) {
     LayerStyleType.Stroke = 0;
     LayerStyleType.DropShadow = 1;
@@ -544,7 +546,5 @@ var LayerStyleType;
     LayerStyleType.Satin = 6;
     LayerStyleType.ColorOverlay = 7;
     LayerStyleType.GradientOverlay = 8;
-})(LayerStyleType || (LayerStyleType = {}));
-
-export { BlendMode, Composite, EffectType, EffectValueType, FillRule, GradientType, LayerStyleType, LayerType, LineCap, LineJoin, MaskMode, MatteMode, PolyStarType, ShapeDirection, ShapeType, StrokeDashType, TextType, TrimMultipleShapes };
-//# sourceMappingURL=index.js.map
+})(exports.LayerStyleType || (exports.LayerStyleType = {}));
+//# sourceMappingURL=index.cjs.map
