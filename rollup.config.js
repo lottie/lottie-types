@@ -47,7 +47,10 @@ const config = [
   },
   {
     input: "./src/index.ts",
-    output: [{ banner, file: "./index.d.ts", format: "es" }],
+    output: [
+      { banner, file: "./index.d.ts", format: "es" },
+      { banner, file: "./index.d.cts", format: "es" },
+    ],
     plugins: [dts()],
   },
 ];

@@ -23,6 +23,6 @@
     "noUnusedLocals": true /* Enable error reporting when a local variables aren't read. */,
     "noUnusedParameters": true /* Raise an error when a function parameter isn't read */
   },
-  "include": ["./src/**/*.ts", "./src/**/*.d.ts"],
+  "include": ["./src/**/*.ts"],
   "exclude": ["types"]
 }

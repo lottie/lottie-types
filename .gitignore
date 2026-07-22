@@ -27,6 +27,12 @@ __snapshots__
 # Build artifacts
 **/dist/
 **/release/
+/index.cjs
+/index.cjs.map
+/index.d.cts
+/index.d.ts
+/index.js
+/index.js.map
 
 # IDE related
 .idea
