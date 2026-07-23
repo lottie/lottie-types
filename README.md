@@ -8,7 +8,7 @@ npm install --save @lottie-animation-community/lottie-types
 
 ## Summary
 
-This package contains type definitions and runtime constants for the Lottie animation format.
+This package contains type definitions and runtime constants for the Lottie animation format, with dedicated ESM and CommonJS entry points.
 
 ```ts
 import { BlendMode, LayerType } from "@lottie-animation-community/lottie-types";
@@ -17,11 +17,17 @@ const blendMode: BlendMode = BlendMode.Normal;
 const layerType: LayerType = LayerType.Text;
 ```
 
+```js
+const { BlendMode } = require("@lottie-animation-community/lottie-types");
+```
+
 The deprecated uppercase enum names remain available for compatibility:
 
 ```ts
 const blendMode: BlendMode.VALUE = BlendMode.VALUE.NORMAL;
 ```
+
+Since the constants exist at runtime, install the package as a regular dependency (not a `devDependency`) if you use them as values rather than only as types.
 
 ## Details
 
@@ -67,7 +73,7 @@ The following steps will get you setup to contribute changes to this repo:
 
 | Command                  | Description                                                          |
 | ------------------------ | -------------------------------------------------------------------- |
-| `yarn clean`             | Deletes generated JavaScript, declarations, and source maps          |
+| `yarn clean`             | Deletes the generated package entry points                           |
 | `yarn test`              | Builds and validates types plus ESM and CommonJS runtime exports     |
 | `yarn format:prettier`   | Format the code using prettier                                       |
 | `yarn build`             | Bundles runtime constants and declarations into package entry points |
