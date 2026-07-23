@@ -24,6 +24,8 @@ const blendMember: BlendMode.Normal = BlendMode.Normal;
 const legacyBlend: BlendMode.Value = BlendMode.VALUE.NORMAL;
 const legacyBlendEnum: BlendMode.VALUE = BlendMode.VALUE.NORMAL;
 
+const compositeAbove: Composite.Above = 2;
+const compositeBelow: Composite.Below = 1;
 const legacyCompositeEnum: Composite.VALUE = Composite.VALUE.ABOVE;
 const legacyEffectEnum: EffectType.VALUE = EffectType.VALUE.TINT;
 const legacyEffectValueEnum: EffectValueType.VALUE =
@@ -75,6 +77,8 @@ void [
   blendMember,
   legacyBlend,
   legacyBlendEnum,
+  compositeAbove,
+  compositeBelow,
   legacyCompositeEnum,
   legacyEffectEnum,
   legacyEffectValueEnum,

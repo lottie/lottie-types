@@ -38,8 +38,8 @@ module.exports = (lottie) => {
   // Spot-check every namespace against the Lottie spec values.
   assert.equal(BlendMode.Normal, 0);
   assert.equal(BlendMode.HardMix, 17);
-  assert.equal(Composite.Above, 1);
-  assert.equal(Composite.Below, 2);
+  assert.equal(Composite.Above, 2);
+  assert.equal(Composite.Below, 1);
   assert.equal(EffectType.Custom, 5);
   assert.equal(EffectType.Puppet, 34);
   assert.equal(EffectValueType.Slider, 0);
