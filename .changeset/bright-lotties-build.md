@@ -2,6 +2,11 @@
 "@lottie-animation-community/lottie-types": minor
 ---
 
-Export runtime constant namespaces for ESM and CommonJS consumers while preserving the legacy enum type API. The deprecated numeric `.VALUE` and `.VALUES` compatibility enums now exist at runtime, so their objects include TypeScript's numeric reverse mappings in addition to their named keys.
-
-Note for consumers of the deprecated `.VALUE`/`.VALUES` enums: these were previously ambient `const enum`s that TypeScript inlined at compile time, so no runtime dependency existed. Code using them now compiles to a real runtime import of this package — if you use these values, make sure the package is installed at runtime (not only in `devDependencies`).
+- feat: export runtime constant namespaces for ESM and CommonJS consumers
+- feat: ship dedicated ESM (`index.js`) and CommonJS (`index.cjs`) entry points with per-condition type declarations (`index.d.ts` / `index.d.cts`)
+- feat: make the deprecated `.VALUE`/`.VALUES` compatibility enums available at runtime
+- feat: restore the deprecated `TextType.Regular`, `TextType.AllCaps`, and `TextType.SmallCaps` aliases
+- feat: declare `sideEffects: false` so bundlers can tree-shake the package
+- fix: resolve types for CommonJS TypeScript consumers under `node16`/`nodenext`
+- fix: reject namespace objects in the `TextType` value union
+- fix: add the missing `@deprecated` tag to `TextType.TEXT_CAPS`
