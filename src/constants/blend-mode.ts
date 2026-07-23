@@ -45,7 +45,7 @@ export namespace BlendMode {
   export type HardMix = typeof HardMix;
 
   /** @deprecated Use the {@linkcode BlendMode} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     NORMAL = Normal,
     MULTIPLY = Multiply,
     SCREEN = Screen,

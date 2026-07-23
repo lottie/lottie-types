@@ -13,7 +13,7 @@ export namespace PolyStarType {
   export type Polygon = typeof Polygon;
 
   /** @deprecated Use the {@linkcode PolyStarType} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     STAR = Star,
     POLYGON = Polygon,
   }

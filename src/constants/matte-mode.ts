@@ -19,7 +19,7 @@ export namespace MatteMode {
   export type InvertedLuma = typeof InvertedLuma;
 
   /** @deprecated Use the {@linkcode MatteMode} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     NORMAL = Normal,
     ALPHA = Alpha,
     INVERTED_ALPHA = InvertedAlpha,

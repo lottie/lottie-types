@@ -15,7 +15,7 @@ export namespace LineCap {
   export type Square = typeof Square;
 
   /** @deprecated Use the {@linkcode LineCap} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     BUTT = Butt,
     ROUND = Round,
     SQUARE = Square,

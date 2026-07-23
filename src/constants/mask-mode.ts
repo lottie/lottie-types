@@ -23,7 +23,7 @@ export namespace MaskMode {
   export type Difference = typeof Difference;
 
   /** @deprecated Use the {@linkcode MaskMode} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     NO = No,
     ADD = Add,
     SUBTRACT = Subtract,

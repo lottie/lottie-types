@@ -3,7 +3,7 @@
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Language and Environment */
-    "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "target": "es2018" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
 
     /* Modules */
     "module": "esnext" /* Specify what module code is generated. */,
@@ -14,6 +14,7 @@
     "noEmit": true /* Do not emit output. */,
 
     /* Interop Constraints */
+    "isolatedModules": true /* Ensure every source file can be transpiled independently. */,
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
 
     /* Type Checking */
@@ -22,6 +23,6 @@
     "noUnusedLocals": true /* Enable error reporting when a local variables aren't read. */,
     "noUnusedParameters": true /* Raise an error when a function parameter isn't read */
   },
-  "include": ["./src/*"],
+  "include": ["./src/**/*.ts"],
   "exclude": ["types"]
 }

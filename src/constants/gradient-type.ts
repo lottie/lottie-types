@@ -15,7 +15,7 @@ export namespace GradientType {
   export type Radial = typeof Radial;
 
   /** @deprecated Use the {@linkcode GradientType} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     LINEAR = Linear,
     RADIAL = Radial,
   }

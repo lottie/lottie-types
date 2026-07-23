@@ -15,7 +15,7 @@ export namespace LineJoin {
   export type Bevel = typeof Bevel;
 
   /** @deprecated Use the {@linkcode LineJoin} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     MITER = Miter,
     ROUND = Round,
     BEVEL = Bevel,

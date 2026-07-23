@@ -13,7 +13,7 @@ export namespace TrimMultipleShapes {
   export type Simultaneously = typeof Simultaneously;
 
   /** @deprecated Use the {@linkcode TrimMultipleShapes} namespace */
-  export const enum VALUES {
+  export enum VALUES {
     INDIVIDUALLY = Individually,
     SIMULTANEOUSLY = Simultaneously,
   }

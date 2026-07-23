@@ -26,7 +26,7 @@ export namespace ShapeDirection {
   export type ClockwiseReversed = typeof ClockwiseReversed;
 
   /** @deprecated Use the {@linkcode ShapeDirection} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     NORMAL = Normal,
     CLOCKWISE = Clockwise,
     CLOCKWISE_REVERSED = ClockwiseReversed,

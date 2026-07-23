@@ -38,7 +38,7 @@ export namespace LayerType {
   export type Data = typeof Data;
 
   /** @deprecated Use the {@linkcode LayerType} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     PRECOMPOSITION = Precomposition,
     SOLID_COLOR = SolidColor,
     IMAGE = Image,

@@ -37,6 +37,7 @@ export namespace TextType {
     export const SmallCaps = 2;
     export type SmallCaps = typeof SmallCaps;
   }
+  /** @deprecated Use the {@linkcode TextType.Caps} namespace */
   export enum TEXT_CAPS {
     REGULAR = Caps.Regular,
     ALL_CAPS = Caps.AllCaps,
@@ -204,6 +205,15 @@ export namespace TextType {
   /** @deprecated Use {@linkcode TextType.Based.Lines} */
   export const Lines = Based.Lines;
   export type Lines = typeof Lines;
+  /** @deprecated Use {@linkcode TextType.Caps.Regular} */
+  export const Regular = Caps.Regular;
+  export type Regular = typeof Regular;
+  /** @deprecated Use {@linkcode TextType.Caps.AllCaps} */
+  export const AllCaps = Caps.AllCaps;
+  export type AllCaps = typeof AllCaps;
+  /** @deprecated Use {@linkcode TextType.Caps.SmallCaps} */
+  export const SmallCaps = Caps.SmallCaps;
+  export type SmallCaps = typeof SmallCaps;
   /** @deprecated Use {@linkcode TextType.Grouping.Word} */
   export const Word = Grouping.Word;
   export type Word = typeof Word;

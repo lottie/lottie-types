@@ -15,7 +15,7 @@ export namespace StrokeDashType {
   export type Offset = typeof Offset;
 
   /** @deprecated Use the {@linkcode StrokeDashType} namespace */
-  export const enum VALUE {
+  export enum VALUE {
     DEFAULT = Default,
     GAP = Gap,
     OFFSET = Offset,

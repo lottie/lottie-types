@@ -33,14 +33,22 @@ const config = [
         banner,
         file: "./index.js",
         format: "es",
-        sourcemap: true,
+      },
+      {
+        banner,
+        exports: "named",
+        file: "./index.cjs",
+        format: "cjs",
       },
     ],
     plugins: [typescript({ tsconfig: "./tsconfig.json" })],
   },
   {
     input: "./src/index.ts",
-    output: [{ banner, file: "./index.d.ts", format: "es" }],
+    output: [
+      { banner, file: "./index.d.ts", format: "es" },
+      { banner, file: "./index.d.cts", format: "es" },
+    ],
     plugins: [dts()],
   },
 ];
