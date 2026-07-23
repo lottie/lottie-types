@@ -1,14 +1,6 @@
 import { Helpers } from "../helpers";
 
-export type TextType =
-  | TextType.Based
-  | TextType.Caps
-  | TextType.Grouping
-  | TextType.Justify
-  | TextType.Shape
-  | TextType.FontPathOrigin
-  | TextType.VerticalJustify
-  | TextType.RangeSelectorMode;
+export type TextType = Helpers.Values<typeof TextType>;
 export namespace TextType {
   export type Based = Helpers.Values<typeof Based>;
   export namespace Based {
@@ -45,6 +37,7 @@ export namespace TextType {
     export const SmallCaps = 2;
     export type SmallCaps = typeof SmallCaps;
   }
+  /** @deprecated Use the {@linkcode TextType.Caps} namespace */
   export enum TEXT_CAPS {
     REGULAR = Caps.Regular,
     ALL_CAPS = Caps.AllCaps,

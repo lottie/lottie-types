@@ -24,9 +24,7 @@
     "index.d.ts",
     "index.d.cts",
     "index.js",
-    "index.js.map",
-    "index.cjs",
-    "index.cjs.map"
+    "index.cjs"
   ],
   "scripts": {
     "clean": "rm -f index.d.ts index.d.cts index.js index.js.map index.cjs index.cjs.map",

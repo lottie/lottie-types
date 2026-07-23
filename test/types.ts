@@ -5,6 +5,7 @@ import {
   EffectValueType,
   FillRule,
   GradientType,
+  LayerStyleType,
   LayerType,
   LineCap,
   LineJoin,
@@ -29,6 +30,9 @@ const legacyEffectValueEnum: EffectValueType.VALUE =
   EffectValueType.VALUE.SLIDER;
 const legacyFillRuleEnum: FillRule.VALUE = FillRule.VALUE.NON_ZERO;
 const legacyGradientEnum: GradientType.VALUE = GradientType.VALUE.LINEAR;
+const layerStyle: LayerStyleType = LayerStyleType.Stroke;
+const layerStyleMember: LayerStyleType.GradientOverlay =
+  LayerStyleType.GradientOverlay;
 const layer: LayerType = LayerType.Text;
 const legacyLayerEnum: LayerType.VALUE = LayerType.VALUE.TEXT;
 const legacyLineCapEnum: LineCap.VALUE = LineCap.VALUE.BUTT;
@@ -76,6 +80,8 @@ void [
   legacyEffectValueEnum,
   legacyFillRuleEnum,
   legacyGradientEnum,
+  layerStyle,
+  layerStyleMember,
   layer,
   legacyLayerEnum,
   legacyLineCapEnum,
