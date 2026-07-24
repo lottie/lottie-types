@@ -25,7 +25,8 @@ jobs:
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 24.x
-          registry-url: https://registry.npmjs.org
+          # Omit registry-url because setup-node's auth placeholder requires
+          # NODE_AUTH_TOKEN, which is intentionally absent when publishing via OIDC.
           package-manager-cache: false
 
       - name: Enable Corepack
